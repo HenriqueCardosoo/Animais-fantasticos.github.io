@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production ./js/script.js -o ./",
+    "dev": "webpack --mode development --watch ./js/script.js -o ./"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.49.0"
+    "eslint": "^8.49.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
