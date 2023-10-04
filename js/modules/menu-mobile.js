@@ -1,4 +1,4 @@
-import outsideClick from './debounce.js';
+import outsideClick from './outsideclick.js';
 
 export default class MenuMobile {
   constructor(menuButton, menuList, events) {
@@ -14,7 +14,8 @@ export default class MenuMobile {
     this.openMenu = this.openMenu.bind(this);
   }
 
-  openMenu() {
+  openMenu(event) {
+    event.preventDefault();
     this.menuList.classList.add(this.activeClass);
     this.menuButton.classList.add(this.activeClass);
     outsideClick(this.menuList, this.events, () => {
